@@ -3,11 +3,14 @@
 Python Implementation of CAFÉ-Map: Context Aware Feature Mapping for mining high dimensional biomedical data 
 as described in paper [1] 
 
-Authors: 
+##Authors: 
 
 Dr. Fayyaz Minhas (afsar <at> pieas dot edu dot pk)
+
 Amina Asif  (a.asif.shah01 <at> gmail dot com )
+
 Muhammad Arif (syedmarif2003 <at> yahoo dot com)
+
 Downloaded From: http://faculty.pieas.edu.pk/fayyaz/software.html#cafemap
 
 
