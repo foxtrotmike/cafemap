@@ -13,6 +13,7 @@ Muhammad Arif (syedmarif2003 <at> yahoo dot com)
 
 Downloaded From: http://faculty.pieas.edu.pk/fayyaz/software.html#cafemap
 
+##Contents
 
 This folder contains the package "cafeMap" and all example files. 
 
@@ -49,7 +50,7 @@ installed. All the parameters are explained in comments.
 
 
 
-References:
+##References:
 [1]F. ul A. A. Minhas, A. Asif, and M. Arif, “CAFÉ-Map: Context Aware Feature Mapping 
 for mining high dimensional biomedical data,” Computers in Biology and Medicine, vol. 79, pp. 68–79, Dec. 2016.
 
