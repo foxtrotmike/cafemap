@@ -13,6 +13,13 @@ Muhammad Arif (syedmarif2003 <at> yahoo dot com)
 
 Downloaded From: http://faculty.pieas.edu.pk/fayyaz/software.html#cafemap
 
+##Installation
+
+1. Go to directory /cafemap-master/cafeMap in command prompt
+2. Execute the command: pip install .
+or
+2. python setup.py install
+
 ##Contents
 
 This folder contains the package "cafeMap" and all example files. 
