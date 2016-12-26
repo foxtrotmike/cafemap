@@ -56,8 +56,8 @@ installed. All the parameters are explained in comments.
 
 
 ##References:
-[1]F. ul A. A. Minhas, A. Asif, and M. Arif, “CAFÉ-Map: Context Aware Feature Mapping 
-for mining high dimensional biomedical data,” Computers in Biology and Medicine, vol. 79, pp. 68–79, Dec. 2016.
+[1] [F. ul A. A. Minhas, A. Asif, and M. Arif, “CAFÉ-Map: Context Aware Feature Mapping 
+for mining high dimensional biomedical data,” Computers in Biology and Medicine, vol. 79, pp. 68–79, Dec. 2016.](http://www.sciencedirect.com/science/article/pii/S001048251630258X)
 
 [2] Wang, Jinjun, Jianchao Yang, Kai Yu, Fengjun Lv, T. Huang, and Yihong Gong. 
 “Locality-Constrained Linear Coding for Image Classification.” In 2010 IEEE Conference on Computer Vision and 
