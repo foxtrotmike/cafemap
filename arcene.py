@@ -32,9 +32,9 @@ if __name__=='__main__':
     
     I = createInstances(X, Y)
     Iv = createInstances(Xv, Yv)
-    llc = compute_gammas(I+Iv, K=10, k=10, gamma=1e-3,  rand = True)
-    classifier = cafeMap(Lambda = 1e-2, T = 20e3, no_bias = False, encoder = None)
-    classifier.train(I, history = 500, K=50, gamma=1e-3, rand = True) #10-fold CV,, parallel = 3,
+    llc = compute_gammas(I+Iv, K=50,  gamma=1e-3)
+    classifier = cafeMap(Lambda = 1e-2, T = 20e3,  no_bias = False, encoder = None, c_arg=True)
+    classifier.train(I, history = 500)
     scores = np.array(classifier.test(Iv))
     aidx = np.argsort(scores)    
     pidx = Yv==1

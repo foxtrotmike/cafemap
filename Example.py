@@ -48,22 +48,27 @@ if __name__ == '__main__':
     instances=createInstances(features, labels)
     #instances= data points of type Instance as needed by cafemap
     
-    c=cafeMap(T=10000, Lambda=0.01, beta=0.1, K=10, k=10, gamma=0.1)
-    # T= number of iterations
-    #Lambda= regularization parameter
-    #beta= beta parameter in coordinate descent algorithm
+    
+    compute_gammas(instances, K=10, k=10, gamma=0.1)# locally linear coding. 
     #K= number of Anchor points in llc
     #k= number of non zero coefficients
     #gamma= hyper parameter >0 for llc to enforce sparsity and locality 
     
-    result, folds= kFoldCV(c, instances)
-    # c= trained cafemap classifier
+    c=cafeMap(T=1000, Lambda=0.00001, beta=0.1)
+    # T= number of iterations
+    #Lambda= regularization parameter. default 1e-3
+    #beta= beta parameter in coordinate descent algorithm. default value 0.25
+   
     
+    result, folds= kFoldCV(c, instances)# perform k fold cross validation. by default 10 fold CV
+    # c= trained cafemap classifier
+    #result, folds= kFoldCV(c, instances,folds=5) for 5 fold CV
     #result, folds= kFoldCV(c, instances, parallel=4)
     # parallel= number of Cpu cores to be used
     # parallel implementation requires "joblib"
     
     scores,labels,classifiers = zip(*result)
-    perFoldAuc, perFoldAcc= perFoldAUC(scores, labels)
+    perFoldAuc, perFoldAcc, perFoldBestAcc, perFoldThresh= perFoldAUC(scores, labels)
     print "The AVG AUC for 10 folds=", np.mean(perFoldAuc)
     print "The AVG Accuracy for 10 folds=", np.mean(perFoldAcc)
+    print "The AVG Accuracy for 10 folds(best threshold)=", np.mean(perFoldBestAcc)

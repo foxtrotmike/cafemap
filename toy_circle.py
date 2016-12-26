@@ -58,8 +58,8 @@ if __name__=='__main__':
 
     instances=createInstances(X, Y)
     
-    classifier = cafeMap(Lambda = 1e-1, T = 5e3, no_bias = False)    
-    result,folds = classifier.kFoldCV(instances, K = 5, gamma = 1e-3, folds = 5, shuffle = True, history = 100, parallel = 4) #10-fold CV,, parallel = 3,
+    classifier = cafeMap(Lambda = 1e-1, T = 5e3, no_bias = False, encoder='llc', K = 5, gamma = 1e-3)    
+    result,folds = classifier.kFoldCV(instances,  folds = 5, shuffle = True, history = 100, parallel = 4) #10-fold CV,, parallel = 3,
     scores,labels,classifiers = zip(*result)    
     Wb = np.array([c.localWb(instances) for c in classifiers])
     W = np.mean(Wb,axis = 0)[:-1]

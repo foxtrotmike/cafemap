@@ -8,10 +8,16 @@ Amina Asif  (a.asif.shah01 <at> gmail dot com )
 Muhammad Arif (syedmarif2003 <at> yahoo dot com)
 Downloaded From: http://faculty.pieas.edu.pk/fayyaz/software.html#cafemap
 
-
 This folder contains the package "cafeMap" and all example files. 
 
-CafeMap folder has the following modules:
+INSTALLATION INSTRUCTIONS FOR THE PACKAGE:
+1. Go to directory ..../cafemap-master/cafeMap in command prompt
+2. Execute the command: pip install .
+or
+python setup.py install
+
+
+CafeMap package has the following modules:
 
 cafemap.py: class implementation of cafemap according to the algorithm presented in the paper
 
@@ -30,10 +36,10 @@ utils.py: contains utility functions to facilitate compilation of results
 
 Following files contain the code that generated the results published in the study:
 
+results_table1.py produces the results presented in Table 1 of [1]
 l-shaped.py: produces the plots presented in Figure 2 of [1]
 2x2checker.py: produces the plots presented in Figure 3 of [1]
 toy_circle.py: produces the plots for circular data as presented in Figure 4 of [1]. 
-toy_lin.py: produces the plots presented in Figure 5 of [1]
 arcene.py: produces the plots presented in Figure 6 of [1]
 prostate.py: produces the clustering analysis plots presented in Figure 8 of [1]
 

@@ -66,10 +66,10 @@ if __name__ == '__main__':
     instances=createInstances(data, labels)
     
     ###########################################################
-
+    compute_gammas(instances, K=anchors, gamma=1.0)
     compute_gammas(test_ins, K=anchors,  gamma=1.0)
     #########################################################
-    c=cafeMap(T=50000, beta=0.001, Lambda=0.0001)
+    c=cafeMap(T=50000, beta=0.1, Lambda=0.1)
     c.train(instances, K=anchors, gamma=1.0)
     plt.figure() 
     ########################Testing ##########################

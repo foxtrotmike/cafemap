@@ -41,7 +41,7 @@ if __name__ == '__main__':
     X = (X.T/np.linalg.norm(X,axis=1)).T
     instances=createInstances(X, Y)
     llc = compute_gammas(instances, K=10, k=10)
-    c = cafeMap(Lambda = 1e-3, T = 10e2, no_bias = True, encoder = llc)    
+    c = cafeMap(Lambda = 1e-3, T = 1e2, no_bias = True)    
     result, folds = c.kFoldCV(instances,parallel=1)
     scores,labels,classifiers = zip(*result)
     classifier = classifiers[0]
@@ -49,13 +49,7 @@ if __name__ == '__main__':
     for c in classifiers[1:]:
         Wb+=c.localWb(instances)#[:-1]
     
-        
-    print [np.mean(np.sum(np.abs(x.localWb(instances)[:-1])>0,axis = 0)) for x in classifiers]
-    perFoldAuc, perFoldAcc= perFoldAUC(scores, labels)
-    print "The AVG AUC for 10 folds=", np.mean(perFoldAuc)
-    print "The AVG Accuracy (zero threshold) for 10 folds=", np.mean(perFoldAcc)
-
-
+ 
     
     from sklearn.cluster import KMeans
     Wb0 = Wb*1

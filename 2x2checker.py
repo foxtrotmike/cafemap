@@ -80,10 +80,11 @@ if __name__ == '__main__':
     instances=createInstances(data, labels)    
     ###########################################################
 
+    compute_gammas(instances, K=anchors[0], k=2, gamma=1.0)
     compute_gammas(test_ins, K=anchors[0], k=2, gamma=1.0)
     #########################################################
-    c=cafeMap(T=10000, beta=0.1, Lambda=0.001)
-    c.train(instances,   K=anchors[0],k=2, gamma=1.0)
+    c=cafeMap(T=10000, beta=10.0, Lambda=0.1)
+    c.train(instances)
     plt.figure() 
     ########################Testing ##########################
     predictions=[]
