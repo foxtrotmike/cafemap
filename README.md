@@ -17,7 +17,9 @@ Downloaded From: http://faculty.pieas.edu.pk/fayyaz/software.html#cafemap
 
 1. Go to directory /cafemap-master/cafeMap in command prompt
 2. Execute the command: pip install .
+
 or
+
 2. python setup.py install
 
 ##Contents
